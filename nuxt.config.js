@@ -62,5 +62,7 @@ export default {
         test: process.env.BASE_URL,
         apiKey: process.env.API_KEY
     },
-    privateRuntimeConfig: {}
+    privateRuntimeConfig: {
+        apiKey: process.env.API_KEY
+    }
 };
