@@ -104,7 +104,12 @@ export default {
 			foodContents: [],
 			rank: 0
         };
-    },
+	},
+	mounted() {
+		window.console.log("YEEEEEEET")
+		console.log(this.$config.baseURL)
+		console.log(this.$config.test)
+	},
     methods: {
         displayFoodContent(data) {
             const foodItems = data.outputs[0].data.concepts;
@@ -119,7 +124,7 @@ export default {
         },
         predict() {
             const app = new Clarifai.App({
-                apiKey: process.env.API_KEY || {}
+                apiKey: this.$config.apiKey || {}
             });
             this.imageUrl = this.inputField;
 
