@@ -107,6 +107,7 @@ export default {
 	},
 	mounted() {
 		window.console.log("YEEEEEEET")
+		console.log(process.env)
 		console.log(this.$config)
 	},
     methods: {
