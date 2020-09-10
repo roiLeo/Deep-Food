@@ -107,8 +107,7 @@ export default {
 	},
 	mounted() {
 		window.console.log("YEEEEEEET")
-		console.log(this.$config.baseURL)
-		console.log(this.$config.test)
+		console.log(this.$config)
 	},
     methods: {
         displayFoodContent(data) {
