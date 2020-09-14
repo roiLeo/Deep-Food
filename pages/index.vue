@@ -123,7 +123,7 @@ export default {
         },
         predict() {
             const app = new Clarifai.App({
-                apiKey: this.$config.apiKey || {}
+                apiKey: __NUXT__.config || {}
             });
             this.imageUrl = this.inputField;
 
