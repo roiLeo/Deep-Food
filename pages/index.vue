@@ -107,8 +107,7 @@ export default {
 	},
 	mounted() {
 		window.console.log("YEEEEEEET")
-		console.log(process.env)
-		console.log(this.$config)
+		console.log(__NUXT__.config)
 	},
     methods: {
         displayFoodContent(data) {
