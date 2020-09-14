@@ -106,7 +106,7 @@ export default {
         };
 	},
 	mounted() {
-		window.console.log("YEEEEEEET")
+		window.console.log("Config :")
 		console.log(__NUXT__.config)
 	},
     methods: {
