@@ -105,6 +105,9 @@ export default {
 			rank: 0
         };
 	},
+	asyncData({ $config: { baseURL } }) {
+    	console.log(baseURL)
+  	},
 	mounted() {
 		window.console.log("Config :")
 		console.log(__NUXT__.config)
