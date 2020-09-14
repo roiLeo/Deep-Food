@@ -104,7 +104,14 @@ export default {
 			foodContents: [],
 			rank: 0
         };
-    },
+	},
+	asyncData({ $config: { baseURL } }) {
+    	console.log(baseURL)
+  	},
+	mounted() {
+		window.console.log("Config :")
+		console.log(__NUXT__.config)
+	},
     methods: {
         displayFoodContent(data) {
             const foodItems = data.outputs[0].data.concepts;
@@ -119,7 +126,7 @@ export default {
         },
         predict() {
             const app = new Clarifai.App({
-                apiKey: process.env.API_KEY || {}
+                apiKey: __NUXT__.config || {}
             });
             this.imageUrl = this.inputField;
 
